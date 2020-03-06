@@ -7,9 +7,7 @@
     <title>wangEditor demo</title>
 </head>
 <body>
-    <div id="div1">
-    	<p>欢迎使用 wangEditor 富文本编辑器</p>
-	</div>
+    <div id="div1"></div>
 
 <script src="${pageContext.request.contextPath}/static/wangEditor.min.js"></script>
 <script>
@@ -21,12 +19,19 @@
         '微软雅黑',
         'Arial',
         'Tahoma',
-        'Verdana'
+        'Verdana',
+        '华文新魏'
     ];
     editor.create();
 </script>
 </body>
 </html>
+
+
+
+
+
+
 
 
 

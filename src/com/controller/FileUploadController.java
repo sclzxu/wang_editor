@@ -33,7 +33,7 @@ public class FileUploadController extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		try {
 			//设置文件上传后的存储位置(项目中必须先存在)
-			String realPath = getServletContext().getRealPath("/statices/file");
+			String realPath = getServletContext().getRealPath("/static/file");
 			// 为基于磁盘的文件项创建DiskFileItemFactory对象
 			DiskFileItemFactory factory = new DiskFileItemFactory();
 			// 配置存储库（以确保使用安全的临时位置）

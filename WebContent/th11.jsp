@@ -14,11 +14,11 @@
 <script>
     var E = window.wangEditor;
     var editor = new E('#div1');
- 	// 上传图片到服务器
+ 	// 上传图片到服务器(处理上传的后台代码)
     editor.customConfig.uploadImgServer = '${pageContext.request.contextPath}/upload';
- 	// 隐藏“网络图片”tab
+ 	// 隐藏“网络图片”菜单(true是显示--默认，false隐藏)
     editor.customConfig.showLinkImg = false;
- 	// 将图片大小限制为 3M
+ 	// 将每张图片大小限制为 3M(单位为字节)
     editor.customConfig.uploadImgMaxSize = 3 * 1024 * 1024;
  	// 限制一次最多能传几张图片，默认为 10000 张（即不限制），需要限制可自己配置
 	// 限制一次最多上传 5 张图片
@@ -32,7 +32,7 @@
         	// insertImg 是插入图片的函数，editor 是编辑器对象，result 是服务器端返回的结果
         	// 举例：假如上传图片成功后，服务器端返回的是 [url,url,...] 这种格式，即可这样插入图片：
         	for(var i in result){// result 必须是一个 JSON 格式字符串！！！否则报错
-        		insertImg('${pageContext.request.contextPath}/statices/file/'+result[i]);
+        		insertImg('${pageContext.request.contextPath}/static/file/'+result[i]);
         	}
     	}
     }
